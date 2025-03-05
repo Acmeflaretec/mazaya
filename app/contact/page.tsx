@@ -12,7 +12,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1920&auto=format&fit=crop"
-            alt="Contact DentalCare Clinic"
+            alt="Contact Mazaya Dental Center"
             fill
             priority
             className="object-cover brightness-[0.85]"
@@ -46,7 +46,7 @@ export default function ContactPage() {
                 <CardDescription>We're available during business hours</CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-4">
-                <p className="text-lg font-medium">(123) 456-7890</p>
+                <p className="text-lg font-medium">+973 39224333</p>
                 <p className="text-muted-foreground">For appointments and inquiries</p>
                 <Button variant="outline" className="mt-4">
                   Call Now
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 <CardDescription>We'll respond within 24 hours</CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-4">
-                <p className="text-lg font-medium">info@dentalcare-clinic.com</p>
+                <p className="text-lg font-medium">info@mazayadc.com</p>
                 <p className="text-muted-foreground">For general inquiries</p>
                 <Button variant="outline" className="mt-4">
                   Send Email
@@ -80,8 +80,8 @@ export default function ContactPage() {
                 <CardDescription>Our modern dental facility</CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-4">
-                <p className="text-lg font-medium">123 Dental Street</p>
-                <p className="text-muted-foreground">Medical District, City, 12345</p>
+                <p className="text-lg font-medium">Flat No,6,7,8,9,10</p>
+                <p className="text-muted-foreground">Building No. 515, Road 1332, Block 813, Isa Town, Kingdom of Bahrain</p>
                 <Button variant="outline" className="mt-4">
                   Get Directions
                 </Button>
@@ -94,47 +94,20 @@ export default function ContactPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4 font-heading">Business Hours</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                We offer flexible hours to accommodate your busy schedule. Walk-ins are welcome, but appointments are recommended.
+                We're open 7 days a week to serve your dental needs.
               </p>
             </div>
 
             <div className="max-w-3xl mx-auto">
               <Card className="border-none shadow-md">
                 <CardContent className="p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center pb-2 border-b">
-                        <div className="flex items-center">
-                          <Clock className="h-5 w-5 text-primary mr-2" />
-                          <span className="font-medium">Monday - Friday</span>
-                        </div>
-                        <span>8:00 AM - 7:00 PM</span>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center pb-2 border-b">
+                      <div className="flex items-center">
+                        <Clock className="h-5 w-5 text-primary mr-2" />
+                        <span className="font-medium">Monday - Sunday</span>
                       </div>
-                      <div className="flex justify-between items-center pb-2 border-b">
-                        <div className="flex items-center">
-                          <Clock className="h-5 w-5 text-primary mr-2" />
-                          <span className="font-medium">Saturday</span>
-                        </div>
-                        <span>9:00 AM - 5:00 PM</span>
-                      </div>
-                      <div className="flex justify-between items-center pb-2 border-b">
-                        <div className="flex items-center">
-                          <Clock className="h-5 w-5 text-primary mr-2" />
-                          <span className="font-medium">Sunday</span>
-                        </div>
-                        <span>Closed</span>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h3 className="text-lg font-medium mb-3 font-heading">Special Hours</h3>
-                      <p className="text-muted-foreground mb-3">
-                        We offer extended hours by appointment for emergency dental care.
-                      </p>
-                      <div className="flex items-center text-primary">
-                        <Phone className="h-5 w-5 mr-2" />
-                        <span className="font-medium">(123) 456-7890</span>
-                      </div>
+                      <span>9:00 AM - 11:00 PM</span>
                     </div>
                   </div>
                 </CardContent>

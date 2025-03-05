@@ -46,22 +46,14 @@ export default function Navbar() {
         <Link href="/" className="flex items-center">
           <div className="relative h-10 w-40">
             <span className="font-heading text-2xl font-bold text-primary flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-8 h-8 mr-2"
-              >
-                <path d="M19 10v2a7 7 0 0 1-14 0v-2m14 0a7 7 0 0 0-14 0m14 0H5" />
-                <path d="M8 19h8a4 4 0 0 0 4-4v-3a2 2 0 0 0-2-2h-2" />
-                <path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2" />
-                <path d="M8 15h8" />
-              </svg>
-             Mazya Dc
+             <Image
+               src="/MAZAYA logo Transparent 01.png"
+               alt="Mazaya Dental Center Logo"
+               width={40}
+               height={40}
+               className="mr-2"
+             />
+             Mazaya
             </span>
           </div>
         </Link>

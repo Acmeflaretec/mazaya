@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
-import { CalendarDays, Clock, MapPin, Phone, Mail, ArrowRight, Star, CheckCircle2 } from "lucide-react";
+import { CalendarDays, Clock, MapPin, Phone, Mail, ArrowRight, Star, CheckCircle2, Award, Users, Globe, Stethoscope, Gift, CreditCard } from "lucide-react";
 
 export default function Home() {
   return (
@@ -28,12 +28,12 @@ export default function Home() {
           <div className="max-w-2xl lg:max-w-4xl space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight font-heading">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-                Your Smile Deserves
+                Welcome to Mazaya
               </span><br />
-              <span className="text-white">The Best Care</span>
+              <span className="text-white">Dental Center</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-100 max-w-2xl leading-relaxed">
-              Experience world-class dental care with our team of specialists, utilizing cutting-edge technology in a luxurious, state-of-the-art facility.
+              Experience fully digital dental care with our One-Day Dentistry service. Get your crowns, bridges, and restorations in a single visit at our state-of-the-art facility.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-medium shadow-lg hover:shadow-primary/30 transition-all">
@@ -197,23 +197,170 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Add Why Choose Us Section */}
+      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/dental-pattern.svg')] bg-[length:80px_80px] md:bg-[length:120px_120px] opacity-5" />
+        <div className="container relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-heading text-primary">
+              Why Choose Mazaya Dental Center?
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Experience excellence in dental care with our unique combination of expertise, technology, and patient comfort.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Award className="h-8 w-8 text-primary" />,
+                title: "One-Day Dentistry",
+                description: "Get your crowns, bridges, and restorations in a single visit with our advanced digital technology."
+              },
+              {
+                icon: <Users className="h-8 w-8 text-primary" />,
+                title: "International Expertise",
+                description: "Access world-class dental care from renowned specialists from the UK, Luxembourg, and beyond."
+              },
+              {
+                icon: <Globe className="h-8 w-8 text-primary" />,
+                title: "Dental Tourism Pioneer",
+                description: "First center in Bahrain focusing on dental health tourism, making quality care accessible to all."
+              },
+              {
+                icon: <Stethoscope className="h-8 w-8 text-primary" />,
+                title: "Comprehensive Care",
+                description: "Full range of dental specialties under one roof for seamless, coordinated treatment."
+              },
+              {
+                icon: <Gift className="h-8 w-8 text-primary" />,
+                title: "Premium Amenities",
+                description: "Enjoy our VIP lounge and coffee shop while experiencing luxury dental care."
+              },
+              {
+                icon: <CreditCard className="h-8 w-8 text-primary" />,
+                title: "Flexible Payment Options",
+                description: "Multiple insurance affiliations and in-house financing plans available."
+              },
+            ].map((feature, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
+                <div className="p-3 bg-primary/10 rounded-lg w-fit mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Add Insurance Partners Section */}
+      {/* <section className="py-16 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-heading">Our Insurance Partners</h2>
+            <p className="text-lg text-muted-foreground">
+              We work with major insurance providers to make quality dental care accessible.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          
+            {[1, 2, 3, 4, 5, 6].map((_, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl flex items-center justify-center">
+                <p className="text-gray-400">[Insurance Logo]</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      {/* Add Special Offers Section */}
+      {/* <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-heading text-primary">
+              Special Offers
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Take advantage of our current promotional packages and discounts.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "New Patient Special",
+                description: "Comprehensive exam, cleaning, and X-rays package",
+                price: "49",
+                features: ["Complete Oral Examination", "Professional Cleaning", "Digital X-rays", "Treatment Plan Consultation"]
+              },
+              {
+                title: "Smile Makeover",
+                description: "Transform your smile with our cosmetic package",
+                price: "999",
+                features: ["Teeth Whitening", "Dental Veneers Consultation", "Digital Smile Design", "Treatment Plan"]
+              },
+              {
+                title: "Family Package",
+                description: "Special discount for families of 4 or more",
+                price: "199",
+                features: ["Family Dental Check-up", "Children's Dental Education", "Preventive Care Plan", "20% Off Additional Services"]
+              }
+            ].map((offer, index) => (
+              <Card key={index} className="overflow-hidden">
+                <CardHeader className="bg-primary/5 pb-8">
+                  <CardTitle className="text-2xl font-bold">{offer.title}</CardTitle>
+                  <CardDescription>{offer.description}</CardDescription>
+                  <div className="mt-4">
+                    <span className="text-4xl font-bold text-primary">${offer.price}</span>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <ul className="space-y-4">
+                    {offer.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-primary" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Button className="w-full">Book Now</Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
       {/* About Section */}
       <section className="py-24 md:py-32 bg-gradient-to-b from-white to-gray-50">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Enhanced Image Section */}
             <div className="relative group">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-700 hover:scale-105">
+              <div className="relative rounded-3xl overflow-hidden  transform transition-all duration-700 hover:scale-105 bg-gradient-to-br from-primary/10 to-white">
                 <AspectRatio ratio={4/3}>
-                  <Image
-                    src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop"
-                    alt="Mazaya dental team"
-                    fill
-                    className="object-cover"
-                  />
+                  <div className="absolute inset-0 flex items-center justify-center p-8">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src="/MAZAYA logo Transparent 01.png"
+                        alt="Mazaya Dental Logo"
+                        fill
+                        className="object-contain transition-all duration-500 hover:scale-110"
+                        style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))' }}
+                      />
+                    </div>
+                  </div>
                 </AspectRatio>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-white/10 to-transparent" />
+                <div className="absolute inset-0 border-2 border-white/10 rounded-3xl pointer-events-none" />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100 hidden md:block">
+              
+              {/* Floating Rating Card */}
+              <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100 hidden md:block transform transition-all hover:scale-105">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
@@ -226,38 +373,40 @@ export default function Home() {
               </div>
             </div>
             
+            {/* Content Section */}
             <div className="space-y-8">
               <h2 className="text-4xl md:text-5xl font-bold font-heading bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
                 The Mazaya Difference
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                At Mazaya, we're revolutionizing dental care by combining advanced technology with personalized attention. Our modern approach focuses on creating exceptional experiences that go beyond traditional dentistry.
+                As the pioneer in dental health tourism in Bahrain, we bring world-renowned dentists from the UK, Luxembourg, and beyond, offering exceptional dental care with unmatched convenience and comfort.
               </p>
               
+              {/* Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   {
                     icon: <CheckCircle2 className="h-8 w-8 text-primary" />,
-                    title: "Cutting-Edge Technology",
-                    description: "State-of-the-art equipment for precise treatments"
+                    title: "VIP Lounge",
+                    description: "Luxurious environment for comfortable consultations"
                   },
                   {
                     icon: <CheckCircle2 className="h-8 w-8 text-primary" />,
-                    title: "Comfort-Focused Care",
-                    description: "Relaxing environment with patient-first approach"
+                    title: "Coffee Shop",
+                    description: "Enjoy beverages while you wait"
                   },
                   {
                     icon: <CheckCircle2 className="h-8 w-8 text-primary" />,
-                    title: "Comprehensive Services",
-                    description: "From preventive care to advanced procedures"
+                    title: "Insurance Coverage",
+                    description: "Affiliated with major local & international providers"
                   },
                   {
                     icon: <CheckCircle2 className="h-8 w-8 text-primary" />,
-                    title: "Skilled Professionals",
-                    description: "Experienced team dedicated to your oral health"
+                    title: "Flexible Financing",
+                    description: "In-house payment plans available"
                   }
                 ].map((item, index) => (
-                  <div key={index} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div key={index} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
                     <div className="flex items-center gap-4">
                       <div className="p-2 bg-primary/10 rounded-lg">
                         {item.icon}
@@ -271,8 +420,12 @@ export default function Home() {
                 ))}
               </div>
               
-              <Button asChild className="px-8 py-6 text-lg font-semibold rounded-full bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105">
-                <Link href="/about">Learn About Mazaya</Link>
+              {/* Animated Button */}
+              <Button asChild className="px-8 py-6 text-lg font-semibold rounded-full bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/30">
+                <Link href="/about" className="flex items-center gap-2">
+                  Learn About Mazaya
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -466,7 +619,7 @@ export default function Home() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">(202) 555-1234</p>
+                    <p className="text-gray-600">+973 17 555 555</p>
                   </div>
                 </div>
                 
@@ -476,7 +629,7 @@ export default function Home() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@mazayadental.com</p>
+                    <p className="text-gray-600">info@mazayadc.com</p>
                   </div>
                 </div>
                 
@@ -486,9 +639,8 @@ export default function Home() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-900">Hours</h3>
-                    <p className="text-gray-600">Monday-Thursday: 8:00 AM - 5:00 PM</p>
-                    <p className="text-gray-600">Friday: 8:00 AM - 2:00 PM</p>
-                    <p className="text-gray-600">Saturday-Sunday: Closed</p>
+                    <p className="text-gray-600">Open 7 days a week</p>
+                    <p className="text-gray-600">9:00 AM - 11:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -574,7 +726,21 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-heading">Community Commitment</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We actively conduct charity drives in association with various NGOs and corporate partners, reinforcing our commitment to improving dental health awareness and accessibility for all.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Button asChild className="px-8 py-6 text-lg font-semibold rounded-full bg-primary hover:bg-primary/90">
+              <Link href="/about">Learn More About Our Impact</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
       {/* Map Section */}
       <section className="h-[400px] relative">
         <iframe
@@ -608,6 +774,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Update Business Hours Section */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 font-heading">Business Hours</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              We're open 7 days a week to serve your dental needs.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Card className="border-none shadow-md">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center pb-2 border-b">
+                    <div className="flex items-center">
+                      <Clock className="h-5 w-5 text-primary mr-2" />
+                      <span className="font-medium">Monday - Sunday</span>
+                    </div>
+                    <span>9:00 AM - 11:00 PM</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Add Community Commitment Section before Calendly */}
+     
     </>
   );
 }

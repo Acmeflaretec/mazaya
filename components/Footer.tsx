@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1: About */}
           <div>
-            <h3 className="text-xl font-heading font-bold mb-4">DentalCare Clinic</h3>
+            <h3 className="text-xl font-heading font-bold mb-4">Mazaya Dental Center</h3>
             <p className="mb-4 text-gray-200">
-              Providing exceptional dental care with a patient-centered approach since 2010. Our mission is to create healthy, beautiful smiles that last a lifetime.
+              Providing exceptional dental care with a patient-centered approach. Our mission is to create healthy, beautiful smiles that last a lifetime.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-primary-foreground transition-colors duration-300">
@@ -95,22 +95,20 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-primary-foreground shrink-0 mt-0.5" />
-                <span>123 Dental Street, Medical District, City, 12345</span>
+                <span>Flat No,6,7,8,9,10, Building No. 515, Road 1332, Block 813, Isa Town, Kingdom of Bahrain</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-primary-foreground" />
-                <span>(123) 456-7890</span>
+                <span>+973 39224333</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-primary-foreground" />
-                <span>info@dentalcare-clinic.com</span>
+                <span>info@mazayadc.com</span>
               </li>
               <li className="flex items-start">
                 <Clock className="mr-2 h-5 w-5 text-primary-foreground shrink-0 mt-0.5" />
                 <div>
-                  <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                  <p>Saturday: 9:00 AM - 5:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>Monday - Sunday: 9:00 AM - 11:00 PM</p>
                 </div>
               </li>
             </ul>
@@ -119,7 +117,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-300">
-            &copy; {new Date().getFullYear()} DentalCare Clinic. All rights reserved.
+            &copy; {new Date().getFullYear()} Mazaya Dental Center. All rights reserved.
           </p>
         </div>
       </div>
