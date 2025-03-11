@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Clock, MessageSquare, CalendarDays } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageSquare, CalendarDays, Instagram, Facebook, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -21,7 +21,7 @@ export default function ContactPage() {
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-极3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-heading">
               Contact Us
             </h1>
@@ -36,57 +36,137 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Contact Cards */}
-            <Card className="border-none shadow-md">
+            {/* Call Card */}
+            <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                   <Phone className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-heading">Call Us</CardTitle>
-                <CardDescription>We're available during business hours</CardDescription>
+                <CardTitle className="text-2xl font-heading text-gray-900">Call Us</CardTitle>
+                <CardDescription className="text-gray-500">We're here to help during business hours</CardDescription>
               </CardHeader>
-              <CardContent className="text-center pt-4">
-                <p className="text-lg font-medium">+973 39224333</p>
-                <p className="text-muted-foreground">For appointments and inquiries</p>
-                <Button variant="outline" className="mt-4">
-                  Call Now
-                </Button>
+              <CardContent className="text-center pt-4 space-y-3">
+                <div>
+                  <p className="text-lg font-semibold text-gray-800">+973 17777234</p>
+                  <p className="text-sm text-gray-500">Landline</p>
+                </div>
+                <div>
+                  <p className="text-lg font-semibold text-gray-800">+973 39118291</p>
+                  <p className="text-sm text-gray-500">Mobile</p>
+                </div>
+                <a href="tel:+97317777234" className="inline-block">
+                  <Button variant="outline" className="mt-4 border-primary text-primary hover:bg-primary/10 hover:text-primary">
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call Now
+                  </Button>
+                </a>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-md">
+            {/* Email Card */}
+            <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                   <Mail className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-heading">Email Us</CardTitle>
-                <CardDescription>We'll respond within 24 hours</CardDescription>
+                <CardTitle className="text-2xl font-heading text-gray-900">Email Us</CardTitle>
+                <CardDescription className="text-gray-500">We'll get back to you within 24 hours</CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-4">
-                <p className="text-lg font-medium">info@mazayadc.com</p>
-                <p className="text-muted-foreground">For general inquiries</p>
-                <Button variant="outline" className="mt-4">
-                  Send Email
-                </Button>
+                <p className="text-lg font-semibold text-gray-800">info@mazayadc.com</p>
+                <p className="text-sm text-gray-500 mb-4">For general inquiries</p>
+                <a href="mailto:info@mazayadc.com" className="inline-block">
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary">
+                    <Mail className="mr-2 h-4 w-4" />
+                    Send Email
+                  </Button>
+                </a>
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-md">
+            {/* Visit Card */}
+            <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                   <MapPin className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl font-heading">Visit Us</CardTitle>
-                <CardDescription>Our modern dental facility</CardDescription>
+                <CardTitle className="text-2xl font-heading text-gray-900">Visit Us</CardTitle>
+                <CardDescription className="text-gray-500">Our state-of-the-art facility</CardDescription>
               </CardHeader>
               <CardContent className="text-center pt-4">
-                <p className="text-lg font-medium">Flat No,6,7,8,9,10</p>
-                <p className="text-muted-foreground">Building No. 515, Road 1332, Block 813, Isa Town, Kingdom of Bahrain</p>
-                <Button variant="outline" className="mt-4">
-                  Get Directions
-                </Button>
+                <p className="text-lg font-semibold text-gray-800">Unit 6, Bldg. 515</p>
+                <p className="text-sm text-gray-500 mb-4">Road 1332, Block 813, Kingdom of Bahrain</p>
+                <a href="https://maps.google.com/?q=Unit+6,+Bldg.+515,Road+1332,+Block+813,+Kingdom+of+Bahrain" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary">
+                    <MapPin className="mr-2 h-4 w-4" />
+                    Get Directions
+                  </Button>
+                </a>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Social Media Section */}
+          <div className="mt-24">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6 font-heading bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                Connect With Us on Social Media
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Stay connected for exclusive updates, dental tips, and special offers
+              </p>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  {
+                    platform: "Instagram",
+                    icon: <Instagram className="h-10 w-10 text-white" />,
+                    url: "https://www.instagram.com/mazaya.edc?igsh=MWV1ODRsb3d2ODlobQ%3D%3D&utm_source=qr",
+                    bg: "bg-gradient-to-br from-pink-500 to-purple-600",
+                  },
+                  {
+                    platform: "TikTok",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-10 w-10 text-white">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.10z"/>
+                      </svg>
+                    ),
+                    url: "https://www.tiktok.com/@mazayabh?_t=8rOMH90x4iI&_r=1",
+                    bg: "bg-gradient-to-br from-black to-gray-900",
+                  },
+                  {
+                    platform: "Snapchat",
+                    icon: (
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-10 w-10 text-white">
+                        <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 5.5 4.46 9.96 9.96 9.96 5.5 0 9.96-4.46 9.96-9.96 0-5.5-4.46-9.96-9.96-9.96zm0 1.5c2.3 0 4.38.93 5.88 2.43l-1.42 1.42c-1.1-1.1-2.6-1.78-4.25-1.78-1.66 0-3.15.68-4.25 1.78l-1.42-1.42c1.5-1.5 3.58-2.43 5.88-2.43zm-3.6 3.6l1.42 1.42c-.6.6-.97 1.42-.97 2.3 0 .88.37 1.7.97 2.3l-1.42 1.42c-.9-.9-1.45-2.15-1.45-3.5 0-1.36.55-2.6 1.45-3.5zm7.2 0c.9.9 1.45 2.15 1.45 3.5 0 1.36-.55 2.6-1.45 3.5l-1.42-1.42c.6-.6.97-1.42.97-2.3 0-.88-.37-1.7-.97-2.3l1.42-1.42zm-3.6 3.6c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+                      </svg>
+                    ),
+                    url: "https://snapchat.com/t/LHo1AOSN",
+                    bg: "bg-gradient-to-br from-yellow-400 to-yellow-500",
+                  },
+                  {
+                    platform: "Facebook",
+                    icon: <Facebook className="h-10 w-10 text-white" />,
+                    url: "https://www.facebook.com/profile.php?id=61559196819721",
+                    bg: "bg-gradient-to-br from-blue-600 to-blue-700",
+                  },
+                ].map((social) => (
+                  <Link
+                    key={social.platform}
+                    href={social.url}
+                    target="_blank"
+                    className={`${social.bg} p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2`}
+                  >
+                    <div className="flex flex-col items-center justify-center h-full">
+                      <div className="mb-4">{social.icon}</div>
+                      <span className="text-2xl font-semibold text-white">{social.platform}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Business Hours */}
@@ -102,13 +182,15 @@ export default function ContactPage() {
               <Card className="border-none shadow-md">
                 <CardContent className="p-6">
                   <div className="space-y-4">
-                    <div className="flex justify-between items-center pb-2 border-b">
-                      <div className="flex items-center">
-                        <Clock className="h-5 w-5 text-primary mr-2" />
-                        <span className="font-medium">Monday - Sunday</span>
+                    {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map((day) => (
+                      <div key={day} className="flex justify-between items-center pb-2 border-b">
+                        <div className="flex items-center">
+                          <Clock className="h-5 w-5 text-primary mr-2" />
+                          <span className="font-medium">{day}</span>
+                        </div>
+                        <span>9:00 AM - 11:00 PM</span>
                       </div>
-                      <span>9:00 AM - 11:00 PM</span>
-                    </div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -117,153 +199,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading">Send Us a Message</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Have a question or need more information? Fill out the form below and our team will get back to you as soon as possible.
-              </p>
-              
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start">
-                  <MessageSquare className="h-6 w-6 text-primary mr-4 shrink-0" />
-                  <div>
-                    <h3 className="font-medium">General Inquiries</h3>
-                    <p className="text-muted-foreground">Questions about our services, insurance, or policies</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <CalendarDays className="h-6 w-6 text-primary mr-4 shrink-0" />
-                  <div>
-                    <h3 className="font-medium">Appointments</h3>
-                    <p className="text-muted-foreground">Schedule, reschedule, or cancel your dental appointment</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-primary mr-4 shrink-0" />
-                  <div>
-                    <h3 className="font-medium">Directions</h3>
-                    <p className="text-muted-foreground">Find our location and parking information</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-6">
-                  <form className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium">
-                          Full Name*
-                        </label>
-                        <input
-                          id="name"
-                          type="text"
-                          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                          placeholder="John Doe"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium">
-                          Email Address*
-                        </label>
-                        <input
-                          id="email"
-                          type="email"
-                          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                          placeholder="john@example.com"
-                          required
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium">
-                        Phone Number
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                        placeholder="(123) 456-7890"
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium">
-                        Subject*
-                      </label>
-                      <select
-                        id="subject"
-                        className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                        required
-                      >
-                        <option value="">Select a subject</option>
-                        <option value="appointment">Appointment Request</option>
-                        <option value="inquiry">General Inquiry</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">
-                        Message*
-                      </label>
-                      <textarea
-                        id="message"
-                        rows={4}
-                        className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                        placeholder="How can we help you?"
-                        required
-                      ></textarea>
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <input
-                        id="privacy"
-                        type="checkbox"
-                        className="mt-1 mr-2"
-                        required
-                      />
-                      <label htmlFor="privacy" className="text-sm text-muted-foreground">
-                        I agree to the <Link href="#" className="text-primary hover:underline">Privacy Policy</Link> and consent to having my data processed.
-                      </label>
-                    </div>
-                    
-                    <Button type="submit" className="w-full">
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="h-[500px] relative">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sus!4v1580234295259!5m2!1sen!2sus"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </section>
-
-      {/* FAQ Section */}
+      {/* Add FAQ Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="text-center mb-12">
@@ -277,24 +213,46 @@ export default function ContactPage() {
             <div className="space-y-6">
               {[
                 {
-                  question: "Do you accept insurance?",
-                  answer: "Yes, we accept most major dental insurance plans. Please contact our office to verify your specific coverage before your appointment.",
+                  question: "What is general dentistry?",
+                  answer: "General dentistry refers to the routine care and treatment of the teeth, gums, and mouth. Dentists in this field provide services such as cleanings, fillings, extractions, and preventative care.",
                 },
-                {
-                  question: "What should I do in case of a dental emergency?",
-                  answer: "Call our emergency line at (123) 456-7890 immediately. We offer same-day emergency appointments whenever possible.",
-                },
-                {
+                
+                { 
                   question: "How often should I visit the dentist?",
-                  answer: "We recommend visiting the dentist every six months for regular checkups and cleanings, though some patients may need more frequent visits based on their oral health needs.",
+                  answer: "It's generally recommended to visit the dentist at least twice a year for routine check-ups and cleanings. However, if you have specific oral health concerns, you might need more frequent visits.",
                 },
                 {
-                  question: "What payment methods do you accept?",
-                  answer: "We accept cash, credit cards (Visa, MasterCard, American Express), debit cards, and offer financing options through CareCredit for eligible patients.",
+                  question: "What should I do if I have a toothache?",
+                  answer: "If you have a toothache, it's important to contact your dentist as soon as possible to determine the cause. In the meantime, over-the-counter pain relievers and warm saltwater rinses can help alleviate discomfort.",
+                },
+                
+                {
+                    question: "How can I prevent cavities?",
+                  answer: "Cavities are caused by tooth decay, which occurs when bacteria in the mouth produce acid from sugars. To prevent cavities, brush your teeth twice a day, floss daily, and visit the dentist regularly for cleanings.",
+                  },
+                {
+                  question: "What is a filling, and why would I need one?",
+                  answer: "A filling is used to restore a tooth that has been damaged by decay. The dentist removes the decayed portion of the tooth and fills the area with materials like composite resin, silver amalgam, or gold.",
                 },
                 {
-                  question: "Do you treat children?",
-                  answer: "Yes, we provide dental care for patients of all ages, including children. Our pediatric dentistry services are designed to make dental visits comfortable and positive for young patients.",
+                  question: "What is a root canal, and when is it necessary?",
+                  answer: "A root canal is a treatment used to repair and save a tooth that has become infected or badly decayed. It involves removing the infected pulp from inside the tooth, cleaning the area, and sealing it.",
+                },
+                {
+                  question: "What is the best way to whiten my teeth?",
+                  answer: "Teeth whitening options include professional treatments provided by your dentist or over-the-counter products like whitening toothpaste and strips. Consulting your dentist will help you choose the safest and most effective option for your teeth.",
+                },
+                {
+                  question: "What is gum disease, and how can I prevent it?",
+                  answer: "Gum disease (gingivitis or periodontitis) is an infection of the gums caused by plaque buildup. Brushing, flossing, and regular dental check-ups can help prevent gum disease.",
+                },
+                {
+                  question: "What should I do if I have a broken or chipped tooth?",
+                  answer: "If you break or chip a tooth, contact your dentist immediately. They may be able to repair it with bonding, a crown, or other treatments depending on the extent of the damage.",
+                },
+                {
+                  question: "Is it safe to get dental X-rays?",
+                  answer: "Dental X-rays are generally safe, and the amount of radiation used is very low. Dentists only take X-rays when necessary for diagnosing or monitoring oral health.",
                 },
               ].map((faq, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg">

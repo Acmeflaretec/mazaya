@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1920&auto=format&fit=crop"
+            src="/DSC02178.JPG"
             alt="Mazaya Dental Center"
             fill
             priority
@@ -60,7 +60,7 @@ export default function AboutPage() {
                   <p className="text-muted-foreground">Day Dentistry</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-2">50+</p>
+                  <p className="text-4xl font-bold text-primary mb-2">8+</p>
                   <p className="text-muted-foreground">Insurance Plans</p>
                 </div>
               </div>
@@ -73,6 +73,7 @@ export default function AboutPage() {
                     alt="Mazaya Dental Center"
                     fill
                     className="object-contain"
+                    style={{  }}
                   />
                 </AspectRatio>
               </div>
@@ -142,43 +143,29 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-heading">Community Commitment</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-heading">Our Clinic</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We believe in giving back and improving dental health awareness for all
+              Explore our state-of-the-art facilities and welcoming environment
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                title: "Charity Drives",
-                description: "Regular dental health initiatives in partnership with NGOs",
-                image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=600&auto=format&fit=crop"
-              },
-              {
-                title: "Corporate Partnerships",
-                description: "Collaborating with businesses to improve employee dental health",
-                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop"
-              },
-              {
-                title: "Health Awareness",
-                description: "Educational programs to promote better oral health practices",
-                image: "https://images.unsplash.com/photo-1523050854058-8df9012c7f0c?q=80&w=600&auto=format&fit=crop"
-              }
-            ].map((item, index) => (
+              "/DSC02149.JPG",
+              "/DSC02178.JPG", 
+              "/DSC02180.JPG",
+              "/DSC02187.JPG",
+              "/DSC02189.JPG"
+            ].map((image, index) => (
               <Card key={index} className="border-none shadow-md overflow-hidden">
                 <div className="relative h-64">
                   <Image
-                    src={item.image}
-                    alt={item.title}
+                    src={image}
+                    alt="Mazaya Dental Clinic"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-1 font-heading">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </CardContent>
               </Card>
             ))}
           </div>
@@ -186,7 +173,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-white">
+      {/* <section className="py-16 md:py-24 bg-primary text-white">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-极3xl md:text-4xl font-bold mb-6 font-heading">Experience the Mazaya Difference</h2>
@@ -203,7 +190,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

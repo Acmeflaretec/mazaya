@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Phone, CalendarDays, X } from "lucide-react";
+import BookAppointmentModal from "@/components/BookAppointmentModal";
 
 // Define departments
 const departments = [
@@ -138,6 +139,7 @@ const departments = [
 
 export default function DepartmentsPage() {
   const [activeDept, setActiveDept] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -145,11 +147,11 @@ export default function DepartmentsPage() {
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1920&auto=format&fit=crop"
+            src="/DSC02182.JPG"
             alt="Dental departments"
             fill
             priority
-            className="object-cover"
+            className="object-cover brightness-[0.85]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
         </div>
@@ -239,7 +241,7 @@ export default function DepartmentsPage() {
 
                 <div className="space-y-4 md:space-y-6">
                   <h3 className="text-lg md:text-xl font-semibold">Our Services</h3>
-                  <div className="grid grid-cols-1 gap-3 md:gap-4">
+                  <div className="grid grid-cols-1 gap极3 md:gap-4">
                     {departments
                       .find(d => d.id === activeDept)
                       ?.services.map((service, index) => (
@@ -258,7 +260,10 @@ export default function DepartmentsPage() {
                 </div>
 
                 <div className="mt-6 md:mt-8 flex justify-end">
-                  <Button className="bg-primary hover:bg-primary/90 text-sm md:text-base">
+                  <Button 
+                    onClick={() => setIsModalOpen(true)}
+                    className="bg-primary hover:bg-primary/90 text-sm md:text-base"
+                  >
                     Book Appointment
                   </Button>
                 </div>
@@ -277,16 +282,22 @@ export default function DepartmentsPage() {
               Schedule your consultation today and let our specialists create your perfect smile.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+                <Button onClick={() => setIsModalOpen(true)} size="lg" className="bg-white text-primary hover:bg-white/90">
                 Book Appointment
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                Contact Us
+                Contact Us      
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Book Appointment Modal */}
+      <BookAppointmentModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </>
   );
 }

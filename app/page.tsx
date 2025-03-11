@@ -1,3 +1,6 @@
+  "use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -6,28 +9,34 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
 import { CalendarDays, Clock, MapPin, Phone, Mail, ArrowRight, Star, CheckCircle2, Award, Users, Globe, Stethoscope, Gift, CreditCard } from "lucide-react";
+import BookAppointmentModal from "@/components/BookAppointmentModal";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[800px] overflow-hidden">
+      <section className="relative h-screen min极h-[800px] overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=1920&auto=format&fit=crop"
-            alt="Modern dental clinic"
-            fill
-            priority
-            className="object-cover brightness-[0.85]"
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="object-cover w-full h-full "
             style={{ objectPosition: 'center 30%' }}
-          />
+          >
+            <source src="/MAZAYA DENTAL CLINIC (1).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
         
         <div className="container relative z-10 h-full flex items-center">
           <div className="max-w-2xl lg:max-w-4xl space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight font-heading">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+              <span className="text-white">
                 Welcome to Mazaya
               </span><br />
               <span className="text-white">Dental Center</span>
@@ -36,7 +45,10 @@ export default function Home() {
               Experience fully digital dental care with our One-Day Dentistry service. Get your crowns, bridges, and restorations in a single visit at our state-of-the-art facility.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-medium shadow-lg hover:shadow-primary/30 transition-all">
+              <Button 
+                onClick={() => setIsModalOpen(true)}
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-medium shadow-lg hover:shadow-primary/30 transition-all"
+              >
                 <Phone className="mr-2 h-5 w-5" />
                 Book Appointment
               </Button>  
@@ -45,6 +57,7 @@ export default function Home() {
                 size="lg" 
                 variant="outline" 
                 className="border-white/50 hover:border-white bg-white/10 text-white px-8 py-6 text-lg font-medium backdrop-blur-sm transition-all"
+                onClick={() => setIsModalOpen(true)}
               >
                 <ArrowRight className="mr-2 h-5 w-5" />
                 Explore Services
@@ -55,7 +68,7 @@ export default function Home() {
         
         <div className="absolute bottom-8 left-0 right-0 z-10">
           <div className="container flex justify-center">
-            <div className="w-10 h-16 border-2 border-white/50 rounded-full flex items-center justify-center p-1 animate-bounce">
+          <div className="w-10 h-14 border-2 border-white/50 rounded-full flex items-center justify-center p-1 animate-bounce">
               <div className="w-2 h-2 bg-white rounded-full" />
             </div>
           </div>
@@ -71,7 +84,7 @@ export default function Home() {
         
         <div className="container relative z-10 px-4 sm:px-6">
           <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 font-heading text-primary">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb极6 font-heading text-primary">
               Our Dental Services
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -88,10 +101,10 @@ export default function Home() {
                   <div className="relative w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-primary/10 rounded-xl sm:rounded-2xl transform rotate-45" />
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <path d="M17 4c-4-2-8 7-12 1" />
+                      <path d="M17 4c-4极2-8 7-12 1" />
                       <path d="M17 9c-4-1-8 7-12 2" />
                       <path d="M19 4c0 1.2-.8 2-2 2" />
-                      <path d="M19 9c0 1.2-.8 2-2 2" />
+                      <path d="M19 9c极0 1.2-.8 2-2 2" />
                       <path d="M5 4c0 1.2.8 2 2 2" />
                       <path d="M5 9c0 1.2.8 2 2 2" />
                       <path d="M12 3v18" />
@@ -349,8 +362,7 @@ export default function Home() {
                         src="/MAZAYA logo Transparent 01.png"
                         alt="Mazaya Dental Logo"
                         fill
-                        className="object-contain transition-all duration-500 hover:scale-110"
-                        style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))' }}
+                        className="object-contain"
                       />
                     </div>
                   </div>
@@ -445,145 +457,55 @@ export default function Home() {
             </p>
           </div>
 
-          <Tabs defaultValue="all" className="w-full">
-            <div className="flex justify-center mb-12">
-              <TabsList className="bg-white/50 backdrop-blur-sm border border-gray-100 shadow-sm rounded-full p-1">
-                <TabsTrigger 
-                  value="all" 
-                  className="data-[state=active]:bg-primary data-[state=active]:text-white px-6 py-2 rounded-full transition-all"
-                >
-                  All
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="general" 
-                  className="data-[state=active]:bg-primary data-[state=active]:text-white px-6 py-2 rounded-full transition-all"
-                >
-                  General
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="cosmetic" 
-                  className="data-[state=active]:bg-primary data-[state=active]:text-white px-6 py-2 rounded-full transition-all"
-                >
-                  Cosmetic
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="orthodontics" 
-                  className="data-[state=active]:bg-primary data-[state=active]:text-white px-6 py-2 rounded-full transition-all"
-                >
-                  Orthodontics
-                </TabsTrigger>
-              </TabsList>
-            </div>
-            
-            <TabsContent value="all" className="space-y-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    name: "Sarah Johnson",
-                    service: "Teeth Whitening",
-                    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
-                    content: "The teeth whitening treatment exceeded my expectations. My smile has never looked better, and the staff made me feel comfortable throughout the entire process.",
-                    rating: 5,
-                  },
-                  {
-                    name: "Michael Chen",
-                    service: "Dental Implants",
-                    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=200&auto=format&fit=crop",
-                    content: "After losing a tooth, I was worried about how the implant would look and feel. The team at DentalCare was amazing, and my new implant looks completely natural.",
-                    rating: 5,
-                  },
-                  {
-                    name: "Emily Rodriguez",
-                    service: "Orthodontics",
-                    image: "https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?q=80&w=200&auto=format&fit=crop",
-                    content: "I completed my orthodontic treatment here and couldn't be happier with the results. The clear aligners were convenient, and the staff was always helpful.",
-                    rating: 4,
-                  },
-                ].map((testimonial, index) => (
-                  <Card key={index} className="bg-white/50 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md transition-all">
-                    <CardHeader>
-                      <div className="flex items-center gap-4">
-                        <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm">
-                          <Image
-                            src={testimonial.image}
-                            alt={testimonial.name}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div>
-                          <CardTitle className="text-xl font-semibold">{testimonial.name}</CardTitle>
-                          <CardDescription className="text-primary">{testimonial.service}</CardDescription>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground italic">"{testimonial.content}"</p>
-                    </CardContent>
-                    <CardFooter>
-                      <div className="flex items-center gap-2">
-                        <div className="flex">
-                          {Array.from({ length: testimonial.rating }).map((_, i) => (
-                            <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                          ))}
-                          {Array.from({ length: 5 - testimonial.rating }).map((_, i) => (
-                            <Star key={i} className="h-5 w-5 text-gray-300" />
-                          ))}
-                        </div>
-                        <span className="text-sm text-muted-foreground">({testimonial.rating}/5)</span>
-                      </div>
-                    </CardFooter>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="general" className="space-y-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <Card className="bg-white/50 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md transition-all">
-                  <CardHeader>
-                    <div className="flex items-center gap-4">
-                      <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm">
-                        <Image
-                          src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=200&auto=format&fit=crop"
-                          alt="Robert Wilson"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div>
-                        <CardTitle className="text-xl font-semibold">Robert Wilson</CardTitle>
-                        <CardDescription className="text-primary">Regular Checkup</CardDescription>
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Ameera Shah",
+                service: "Comprehensive Dental Care",
+                content: "I'm incredibly grateful to the Mazaya Dental Center team for their exceptional care. Their professionalism and attention to detail are unmatched. From the warm welcome to the skilled treatment, every aspect was perfect. I wholeheartedly recommend Mazaya for anyone seeking premium dental services.",
+                rating: 5,
+              },
+              {
+                name: "Rincy Neel",
+                service: "Root Canal Treatment",
+                content: "My root canal experience at Mazaya was excellent. The friendly staff immediately put me at ease, and Dr. Stanley's clear explanations calmed my nerves. The procedure was comfortable, with constant care checks, and the thorough aftercare instructions ensured proper healing. Their affordable treatment packages make them my top choice for dental care.",
+                rating: 5,
+              },
+              {
+                name: "Vengilyn Castro",
+                service: "Pediatric Dental Care",
+                content: "Our children's dental visit to Mazaya was wonderful. The clinic's cleanliness and comfortable waiting area impressed us. Dr. Mary and Dr. Stan were exceptional - our kids experienced minimal discomfort during scaling and polishing. We especially appreciated Dr. Stan's patient explanation of proper dental care techniques. We'll definitely return for all our family's dental needs.",
+                rating: 4,
+              },
+              {
+                name: "Samra Bint Ahmed",
+                service: "Comprehensive Dental Consultation",
+                content: "My first visit to Mazaya was fantastic. The professional yet friendly approach of the staff and dentists made me feel at ease. Dr. Stanley's expertise and attentive listening were particularly impressive. It's reassuring to find a dentist who truly understands and addresses your concerns. Thank you for the excellent care!",
+                rating: 5,
+              }
+            ].map((testimonial, index) => (
+              <Card key={index} className="bg-white/50 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md transition-all p-6">
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900">{testimonial.name}</h3>
+                    <p className="text-sm text-primary">{testimonial.service}</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="flex">
+                      {Array.from({ length: testimonial.rating }).map((_, i) => (
+                        <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                      {Array.from({ length: 5 - testimonial.rating }).map((_, i) => (
+                        <Star key={i} className="h-5 w-5 text-gray-300" />
+                      ))}
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground italic">
-                      "I've been coming to DentalCare for my regular checkups for years. The hygienists are gentle and thorough, and Dr. Miller always takes time to answer all my questions."
-                    </p>
-                  </CardContent>
-                  <CardFooter>
-                    <div className="flex items-center gap-2">
-                      <div className="flex">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
-                      <span className="text-sm text-muted-foreground">(5/5)</span>
-                    </div>
-                  </CardFooter>
-                </Card>
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="cosmetic" className="space-y-0">
-              {/* Cosmetic dentistry testimonials would go here */}
-            </TabsContent>
-            
-            <TabsContent value="orthodontics" className="space-y-0">
-              {/* Orthodontics testimonials would go here */}
-            </TabsContent>
-          </Tabs>
+                    <span className="text-sm text-muted-foreground">({testimonial.rating}/5)</span>
+                  </div>
+                  <p className="text-muted-foreground italic">"{testimonial.content}"</p>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -645,12 +567,23 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="flex gap-4">
-                <Button variant="outline" className="px-8 py-6 text-lg font-semibold rounded-full border-primary hover:bg-primary/10 transition-all duration-300 transform hover:scale-105">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call Now
-                </Button>
-                <Button className="px-8 py-6 text-lg font-semibold rounded-full bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+97317777234" className="w-full sm:w-auto">
+                  <Button variant="outline" className="w-full sm:w-auto px-4 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full border-primary hover:bg-primary/10 transition-all duration-300 transform hover:scale-105">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call Landline
+                  </Button>
+                </a>
+                <a href="tel:+97339118291" className="w-full sm:w-auto">
+                  <Button variant="outline" className="w-full sm:w-auto px-4 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full border-primary hover:bg-primary/10 transition-all duration-300 transform hover:scale-105">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call Mobile
+                  </Button>
+                </a>
+                <Button 
+                  onClick={() => setIsModalOpen(true)} 
+                  className="w-full sm:w-auto px-4 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+                >
                   <CalendarDays className="mr-2 h-5 w-5" />
                   Book Appointment
                 </Button>
@@ -737,6 +670,7 @@ export default function Home() {
           <div className="flex justify-center">
             <Button asChild className="px-8 py-6 text-lg font-semibold rounded-full bg-primary hover:bg-primary/90">
               <Link href="/about">Learn More About Our Impact</Link>
+              
             </Button>
           </div>
         </div>
@@ -805,6 +739,11 @@ export default function Home() {
 
       {/* Add Community Commitment Section before Calendly */}
      
+      {/* Modal */}
+      <BookAppointmentModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </>
   );
 }
