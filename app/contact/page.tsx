@@ -11,7 +11,7 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1920&auto=format&fit=crop"
+            src="/DSC02197.JPG"
             alt="Contact Mazaya Dental Center"
             fill
             priority
@@ -51,7 +51,7 @@ export default function ContactPage() {
                   <p className="text-sm text-gray-500">Landline</p>
                 </div>
                 <div>
-                  <p className="text-lg font-semibold text-gray-800">+973 39118291</p>
+                  <p className="text-lg font-semibold text-gray-800">+973 39224333</p>
                   <p className="text-sm text-gray-500">Mobile</p>
                 </div>
                 <a href="tel:+97317777234" className="inline-block">
@@ -168,7 +168,17 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-
+     <section  className="h-[400px] bg-white mt-16">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.0456052774434!2d50.55942427563794!3d26.162644177102262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49afe9fbe4a535%3A0xaaa418f0653d50b1!2sMazaya%20Dental%20Center!5e0!3m2!1sen!2sin!4v1741886257295!5m2!1sen!2sin" 
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
           {/* Business Hours */}
           <div className="mt-16">
             <div className="text-center mb-12">
@@ -188,7 +198,9 @@ export default function ContactPage() {
                           <Clock className="h-5 w-5 text-primary mr-2" />
                           <span className="font-medium">{day}</span>
                         </div>
-                        <span>9:00 AM - 11:00 PM</span>
+                        <span>
+                          {day === 'Friday' ? '1:00 PM - 9:00 PM' : '9:00 AM - 11:00 PM'}
+                        </span>
                       </div>
                     ))}
                   </div>

@@ -15,15 +15,16 @@ const departments = [
     name: "Orthodontics",
     description: "Specialized care for teeth alignment and bite correction using braces and aligners.",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <path d="M17 4c-4-2-8 7-12 1" />
-        <path d="M17 9c-4-1-8 7-12 2" />
-        <path d="M19 4c0 1.2-.8 2-2 2" />
-        <path d="M19 9c0 1.2-.8 2-2 2" />
-        <path d="M5 4c0 1.2.8 2 2 2" />
-        <path d="M5 9c0 1.2.8 2 2 2" />
-        <path d="M12 3v18" />
-      </svg>
+      <div className="relative w-12 h-12">
+        <div className="absolute inset-0 bg-primary/10 rounded-xl transform rotate-45" />
+        <Image
+          src="/ortho.png"
+          alt="Orthodontics Icon"
+          width={40}
+          height={40}
+          className="w-8 h-8 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        />
+      </div>
     ),
     services: [
       "Diagnosis and treatment of misaligned teeth and jaw",
@@ -40,12 +41,16 @@ const departments = [
     name: "Pedodontics (Children's Dentistry)",
     description: "Comprehensive dental care for children, ensuring healthy smiles from an early age.",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M9 9h.01" />
-        <path d="M15 9h.01" />
-        <path d="M8 13h8" />
-      </svg>
+      <div className="relative w-12 h-12">
+        <div className="absolute inset-0 bg-primary/10 rounded-xl transform rotate-45" />
+        <Image
+          src="/pedia.png"
+          alt="Pedodontics Icon"
+          width={40}
+          height={40}
+          className="w-8 h-8 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        />
+      </div>
     ),
     services: [
       "Dental checkups for infants and children",
@@ -62,11 +67,16 @@ const departments = [
     name: "Implantology (Dental Implants & Restoration)",
     description: "Advanced tooth replacement solutions with durable and natural-looking dental implants.",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <path d="M12 5.5v13" />
-        <path d="M5 12h14" />
-        <path d="M5.5 5.5c1-2 3-3 6.5-3s5.5 1 6.5 3c1 2 1 4 0 6-1 2-3 3-6.5 3s-5.5-1-6.5-3c-1-2-1-4 0-6Z" />
-      </svg>
+      <div className="relative w-12 h-12">
+        <div className="absolute inset-0 bg-primary/10 rounded-xl transform rotate-45" />
+        <Image
+          src="/implant.png"
+          alt="Implantology Icon"
+          width={40}
+          height={40}
+          className="w-8 h-8 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        />
+      </div>
     ),
     services: [
       "Dental implant placement (single, multiple, or full-mouth)",
@@ -82,11 +92,16 @@ const departments = [
     name: "Prosthodontics (Replacement of Missing Teeth)",
     description: "Restorative solutions including crowns, bridges, and dentures for complete oral rehabilitation.",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <rect width="18" height="18" x="3" y="3" rx="2" />
-        <path d="M12 8v8" />
-        <path d="M8 12h8" />
-      </svg>
+      <div className="relative w-12 h-12">
+        <div className="absolute inset-0 bg-primary/10 rounded-xl transform rotate-45" />
+        <Image
+          src="/clean.png"
+          alt="Prosthodontics Icon"
+          width={40}
+          height={40}
+          className="w-8 h-8 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        />
+      </div>
     ),
     services: [
       "Crowns, bridges, and veneers",
@@ -102,9 +117,16 @@ const departments = [
     name: "Periodontics (Gum & Bone Health)",
     description: "Expert care for gum health and treatment of periodontal diseases to maintain strong foundations.",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Z" />
-      </svg>
+      <div className="relative w-12 h-12">
+        <div className="absolute inset-0 bg-primary/10 rounded-xl transform rotate-45" />
+        <Image
+          src="/periodo.png"
+          alt="Periodontics Icon"
+          width={40}
+          height={40}
+          className="w-8 h-8 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        />
+      </div>
     ),
     services: [
       "Diagnosis and treatment of gum diseases (gingivitis, periodontitis)",
@@ -120,11 +142,16 @@ const departments = [
     name: "Endodontics (Root Canal & Tooth Preservation)",
     description: "Specialized root canal treatments to save damaged teeth and relieve dental pain.",
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
-        <path d="M16 12c3 2 4 3.5 4 6-2 0-4 0-6-2" />
-        <path d="M8 12c-3 2-4 3.5-4 6 2 0 4 0 6-2" />
-        <path d="M12 4c-2 1-4 2-4 4 0 3.5 2 4.5 4 8 2-3.5 4-4.5 4-8 0-2-2-3-4-4Z" />
-      </svg>
+      <div className="relative w-12 h-12">
+        <div className="absolute inset-0 bg-primary/10 rounded-xl transform rotate-45" />
+        <Image
+          src="/endo.png"
+          alt="Endodontics Icon"
+          width={40}
+          height={40}
+          className="w-8 h-8 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        />
+      </div>
     ),
     services: [
       "Root canal treatment (RCT)",
@@ -153,7 +180,7 @@ export default function DepartmentsPage() {
             priority
             className="object-cover brightness-[0.85]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20" />
         </div>
         
         <div className="container relative">

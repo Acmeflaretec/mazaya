@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/DSC02178.JPG"
@@ -19,16 +19,16 @@ export default function AboutPage() {
             priority
             className="object-cover brightness-[0.85]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
         </div>
         
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-heading">
-              Welcome to Mazaya Dental Center
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 font-heading">
+               Mazaya Dental Center
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-8">
-              Experience fully digital dental care with our One-Day Dentistry service. Get your crowns, bridges, and restorations in a single visit at our state-of-the-art facility.
+            <p className="text-base md:text-lg text-gray-200 mb-8">
+              A fully digital practice revolutionizing dental care with One-Day Dentistry - crowns, bridges, and restorations in a single visit.
             </p>
           </div>
         </div>

@@ -17,58 +17,56 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen min极h-[800px] overflow-hidden">
+      <section className="relative h-screen min-h-[800px] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="object-cover w-full h-full "
+            className="object-cover w-full h-full"
             style={{ objectPosition: 'center 30%' }}
           >
             <source src="/MAZAYA DENTAL CLINIC (1).mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20" />
         </div>
         
         <div className="container relative z-10 h-full flex items-center">
-          <div className="max-w-2xl lg:max-w-4xl space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight font-heading">
-              <span className="text-white">
-                Welcome to Mazaya
-              </span><br />
-              <span className="text-white">Dental Center</span>
+          <div className="max-w-2xl lg:max-w-4xl space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-4xl font-bold text-white leading-tight font-heading">
+              Mazaya Dental Center
             </h1>
-            <p className="text-xl md:text-2xl text-gray-100 max-w-2xl leading-relaxed">
-              Experience fully digital dental care with our One-Day Dentistry service. Get your crowns, bridges, and restorations in a single visit at our state-of-the-art facility.
+            <p className="text-lg md:text-lg text-gray-100 max-w-lg leading-relaxed">
+              Digital dental care with One-Day Dentistry. Crowns, bridges, and restorations in a single visit.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={() => setIsModalOpen(true)}
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-medium shadow-lg hover:shadow-primary/30 transition-all"
+                className="bg-primary hover:bg-primary/90 text-white px-6 py-5 text-base font-medium shadow-lg hover:shadow-primary/30 transition-all"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Book Appointment
+                Book Now
               </Button>  
 
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/50 hover:border-white bg-white/10 text-white px-8 py-6 text-lg font-medium backdrop-blur-sm transition-all"
-                onClick={() => setIsModalOpen(true)}
-              >
-                <ArrowRight className="mr-2 h-5 w-5" />
-                Explore Services
-              </Button>
+              <Link href="/departments" className="w-full md:w-auto">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="w-full md:w-auto border-white/50 hover:border-white bg-white/10 text-white px-6 py-5 text-base font-medium backdrop-blur-sm transition-all"
+                >
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                  Services
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
         
         <div className="absolute bottom-8 left-0 right-0 z-10">
           <div className="container flex justify-center">
-          <div className="w-10 h-14 border-2 border-white/50 rounded-full flex items-center justify-center p-1 animate-bounce">
+          <div className="w-8 h-12 border-2 border-white/50 rounded-full flex items-center justify-center p-1 animate-bounce">
               <div className="w-2 h-2 bg-white rounded-full" />
             </div>
           </div>
@@ -85,7 +83,7 @@ export default function Home() {
         <div className="container relative z-10 px-4 sm:px-6">
           <div className="text-center mb-12 md:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb极6 font-heading text-primary">
-              Our Dental Services
+              Our Dental Departments
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               We provide comprehensive dental care services to meet all your oral health needs in one place.
@@ -100,30 +98,29 @@ export default function Home() {
                 icon: (
                   <div className="relative w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-primary/10 rounded-xl sm:rounded-2xl transform rotate-45" />
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <path d="M17 4c-4极2-8 7-12 1" />
-                      <path d="M17 9c-4-1-8 7-12 2" />
-                      <path d="M19 4c0 1.2-.8 2-2 2" />
-                      <path d="M19 9c极0 1.2-.8 2-2 2" />
-                      <path d="M5 4c0 1.2.8 2 2 2" />
-                      <path d="M5 9c0 1.2.8 2 2 2" />
-                      <path d="M12 3v18" />
-                    </svg>
-                  </div>
+                    <Image
+                      src="/ortho.png"
+                      alt="Orthodontics Icon"
+                      width={40}
+                      height={40}
+                      className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
+                    </div>
                 ),
               },
               {
                 title: "Pedodontics",
                 description: "Comprehensive dental care for children, ensuring healthy smiles from an early age.",
                 icon: (
-                  <div className="relative w-12 h-12 sm:w极16 sm:h-16 mb-4 sm:mb-6">
+                  <div className="relative w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-primary/10 rounded-xl sm:rounded-2xl transform rotate-45" />
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 极24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M9 9h.01" />
-                      <path d="M15 9h.01" />
-                      <path d="M8 13h8" />
-                    </svg>
+                    <Image
+                      src="/pedia.png"
+                      alt="Pedodontics Icon"
+                      width={40}
+                      height={40}
+                      className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
                   </div>
                 ),
               },
@@ -133,11 +130,13 @@ export default function Home() {
                 icon: (
                   <div className="relative w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-primary/10 rounded-xl sm:rounded-2xl transform rotate-45" />
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <path d="M12 5.5v13" />
-                      <path d="M5 12h14" />
-                      <path d="M5.5 5.5c1-2 3-3 6.5-3s5.5 1 6.5 3c1 2 1 4 0 6-1 2-极3 3-6.5 3s-5.5-1-6.5-3c-1-2-1-4 0-6Z" />
-                    </svg>
+                    <Image
+                      src="/implant.png"
+                      alt="Implantology Icon"
+                      width={40}
+                      height={40}
+                      className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
                   </div>
                 ),
               },
@@ -147,12 +146,13 @@ export default function Home() {
                 icon: (
                   <div className="relative w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-primary/10 rounded-xl sm:rounded-2xl transform rotate-45" />
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <path d="M12 2a10 10 0 1 0 10 10H2A10 10 0 0 0 12 2Z" />
-                      <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-                      <path d="M9 9h.01" />
-                      <path d="M15 9极h.01" />
-                    </svg>
+                    <Image
+                      src="/clean.png"
+                      alt="Prosthodontics Icon"
+                      width={40}
+                      height={40}
+                      className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
                   </div>
                 ),
               },
@@ -162,12 +162,13 @@ export default function Home() {
                 icon: (
                   <div className="relative w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-primary/10 rounded-xl sm:rounded-2xl transform rotate-45" />
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <path d="M12 2a10 10 0 1 0 10 10H2A10 10 0 0 0 12 2Z" />
-                      <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-                      <path d="M9 9h.01" />
-                      <path d="M15 9h.01" />
-                    </svg>
+                    <Image
+                      src="/periodo.png"
+                      alt="Periodontics Icon"
+                      width={40}
+                      height={40}
+                      className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
                   </div>
                 ),
               },
@@ -177,12 +178,13 @@ export default function Home() {
                 icon: (
                   <div className="relative w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-primary/10 rounded-xl sm:rounded-2xl transform rotate-45" />
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <path d="M12 2a10 10 0 1 0 10 10H2A10 10 0 0 0 12 2Z" />
-                      <path d="M12 5.5v13" />
-                      <path d="M5 12h14" />
-                      <path d="M5.5 5.5c1-2 3-3 6.5-3s5.5 1 6.5 3c1 2 1 4 0 6-1 2-3 3-6.5 3s-5.5-1-6.5-3c-1-2-1-4 0-6Z" />
-                    </svg>
+                    <Image
+                      src="/endo.png"
+                      alt="Endodontics Icon"
+                      width={40}
+                      height={40}
+                      className="w-8 h-8 sm:w-10 sm:h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
                   </div>
                 ),
               },
@@ -541,7 +543,8 @@ export default function Home() {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+973 17 555 555</p>
+                    <p className="text-gray-600">+973 17777234 - Landline</p>
+                    <p className="text-gray-600">+973 39224333 - Mobile</p>
                   </div>
                 </div>
                 
@@ -574,7 +577,7 @@ export default function Home() {
                     Call Landline
                   </Button>
                 </a>
-                <a href="tel:+97339118291" className="w-full sm:w-auto">
+                <a href="tel:+97339224333" className="w-full sm:w-auto">
                   <Button variant="outline" className="w-full sm:w-auto px-4 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-full border-primary hover:bg-primary/10 transition-all duration-300 transform hover:scale-105">
                     <Phone className="mr-2 h-5 w-5" />
                     Call Mobile
@@ -678,7 +681,7 @@ export default function Home() {
       {/* Map Section */}
       <section className="h-[400px] relative">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007%2C%20USA!5e0!3m2!1sen!2sus!4v1580234295259!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.0456052774434!2d50.55942427563794!3d26.162644177102262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49afe9fbe4a535%3A0xaaa418f0653d50b1!2sMazaya%20Dental%20Center!5e0!3m2!1sen!2sin!4v1741886257295!5m2!1sen!2sin" 
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -720,19 +723,23 @@ export default function Home() {
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <Card className="border-none shadow-md">
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-2 border-b">
-                    <div className="flex items-center">
-                      <Clock className="h-5 w-5 text-primary mr-2" />
-                      <span className="font-medium">Monday - Sunday</span>
-                    </div>
-                    <span>9:00 AM - 11:00 PM</span>
+          <Card className="border-none shadow-md">
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map((day) => (
+                      <div key={day} className="flex justify-between items-center pb-2 border-b">
+                        <div className="flex items-center">
+                          <Clock className="h-5 w-5 text-primary mr-2" />
+                          <span className="font-medium">{day}</span>
+                        </div>
+                        <span>
+                          {day === 'Friday' ? '1:00 PM - 9:00 PM' : '9:00 AM - 11:00 PM'}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
           </div>
         </div>
       </section>

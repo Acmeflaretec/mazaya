@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Mail, Phone, MapPin, Clock } from "lucide-react";
+import { FaSnapchat } from "react-icons/fa";  
 
 export default function Footer() {
   return (
@@ -25,9 +26,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a href="https://snapchat.com/t/LHo1AOSN" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary-foreground transition-colors duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 5.5 4.46 9.96 9.96 9.96 5.5 0 9.96-4.46 9.96-9.96 0-5.5-4.46-9.96-9.96-9.96zm0 1.5c2.3 0 4.38.93 5.88 2.43l-1.42 1.42c-1.1-1.1-2.6-1.78-4.25-1.78-1.66 0-3.15.68-4.25 1.78l-1.42-1.42c1.5-1.5 3.58-2.43 5.88-2.43zm-3.6 3.6l1.42 1.42c-.6.6-.97 1.42-.97 2.3 0 .88.37 1.7.97 2.3l-1.42 1.42c-.9-.9-1.45-2.15-1.45-3.5 0-1.36.55-2.6 1.45-3.5zm7.2 0c.9.9 1.45 2.15 1.45 3.5 0 1.36-.55 2.6-1.45 3.5l-1.42-1.42c.6-.6.97-1.42.97-2.3 0-.88-.37-1.7-.97-2.3l1.42-1.42zm-3.6 3.6c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
-                </svg>
+                <FaSnapchat size={20} />
               </a>
             </div>
           </div>
@@ -42,7 +41,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/departments" className="text-gray-200 hover:text-white transition-colors duration-300">
+                <Link href="/departments" className="text-gray-极200 hover:text-white transition-colors duration-300">
                   Departments
                 </Link>
               </li>
@@ -67,7 +66,7 @@ export default function Footer() {
           {/* Column 3: Services */}
           <div>
             <h3 className="text-xl font-heading font-bold mb-4">Our Services</h3>
-            <ul className="space-y-2">
+            <ul className="space极-y-2">
               <li>
                 <Link href="/departments" className="text-gray-200 hover:text-white transition-colors duration-300">
                   General Dentistry
