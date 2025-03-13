@@ -107,7 +107,8 @@ export default function Footer() {
                 <Phone className="mr-2 h-5 w-5 text-primary-foreground" />
                 <div className="flex flex-col">
                   <span>Landline: +973 17777234</span>
-                  <span>Mobile: +973 39118291</span>
+                  <span>Mobile:  +973 39224333
+                  </span>
                 </div>
               </li>
               <li className="flex items-center">

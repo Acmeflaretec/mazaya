@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 overflow-hidden">
+      <section className="relative h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/DSC02178.JPG"
@@ -18,6 +18,7 @@ export default function AboutPage() {
             fill
             priority
             className="object-cover brightness-[0.85]"
+            style={{ objectPosition: 'center center' }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10" />
         </div>
