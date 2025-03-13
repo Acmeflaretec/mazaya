@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock, MessageSquare, CalendarDays, Instagram, Facebook, MessageCircle } from "lucide-react";
+import { FaSnapchat } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
@@ -75,12 +76,12 @@ export default function ContactPage() {
               <CardContent className="text-center pt-4">
                 <p className="text-lg font-semibold text-gray-800">info@mazayadc.com</p>
                 <p className="text-sm text-gray-500 mb-4">For general inquiries</p>
-                <a href="mailto:info@mazayadc.com" className="inline-block">
+                <Link href="mailto:info@mazayadc.com" className="inline-block">
                   <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary">
                     <Mail className="mr-2 h-4 w-4" />
                     Send Email
                   </Button>
-                </a>
+                </Link>
               </CardContent>
             </Card>
 
@@ -96,7 +97,7 @@ export default function ContactPage() {
               <CardContent className="text-center pt-4">
                 <p className="text-lg font-semibold text-gray-800">Unit 6, Bldg. 515</p>
                 <p className="text-sm text-gray-500 mb-4">Road 1332, Block 813, Kingdom of Bahrain</p>
-                <a href="https://maps.google.com/?q=Unit+6,+Bldg.+515,Road+1332,+Block+813,+Kingdom+of+Bahrain" target="_blank" rel="noopener noreferrer">
+                <a href="https://maps.app.goo.gl/qjJcJVZZMY6Gxbgf6" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary">
                     <MapPin className="mr-2 h-4 w-4" />
                     Get Directions
@@ -138,11 +139,7 @@ export default function ContactPage() {
                   },
                   {
                     platform: "Snapchat",
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-10 w-10 text-white">
-                        <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 5.5 4.46 9.96 9.96 9.96 5.5 0 9.96-4.46 9.96-9.96 0-5.5-4.46-9.96-9.96-9.96zm0 1.5c2.3 0 4.38.93 5.88 2.43l-1.42 1.42c-1.1-1.1-2.6-1.78-4.25-1.78-1.66 0-3.15.68-4.25 1.78l-1.42-1.42c1.5-1.5 3.58-2.43 5.88-2.43zm-3.6 3.6l1.42 1.42c-.6.6-.97 1.42-.97 2.3 0 .88.37 1.7.97 2.3l-1.42 1.42c-.9-.9-1.45-2.15-1.45-3.5 0-1.36.55-2.6 1.45-3.5zm7.2 0c.9.9 1.45 2.15 1.45 3.5 0 1.36-.55 2.6-1.45 3.5l-1.42-1.42c.6-.6.97-1.42.97-2.3 0-.88-.37-1.7-.97-2.3l1.42-1.42zm-3.6 3.6c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
-                      </svg>
-                    ),
+                    icon: <FaSnapchat className="h-10 w-10 text-white" />,
                     url: "https://snapchat.com/t/LHo1AOSN",
                     bg: "bg-gradient-to-br from-yellow-400 to-yellow-500",
                   },

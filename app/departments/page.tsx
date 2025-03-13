@@ -171,7 +171,7 @@ export default function DepartmentsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center">
+      <section className="relative h-[40vh] flex items-center">
         <div className="absolute inset-0">
           <Image
             src="/DSC02182.JPG"
@@ -190,10 +190,10 @@ export default function DepartmentsPage() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Dental Care
             </h1>
-            <p className="text-xl text-gray-200">
+            <p className="text-lg text-gray-200">
               Explore our complete range of dental services, each delivered by specialized experts using cutting-edge technology.
             </p>
           </motion.div>
